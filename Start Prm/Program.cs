@@ -156,7 +156,7 @@ namespace Project_Manager
             task.Status = status;
         }
 
-        public void GenerateReport(string[] elem)
+        public void GenerateReport( )
         {
             Console.WriteLine("Project Name: {0}", this.Name);
             Console.WriteLine("Project Description: {0}", this.Description);
