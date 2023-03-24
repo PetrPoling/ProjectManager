@@ -5,8 +5,7 @@ using TaskStatus = System.Threading.Tasks.TaskStatus;
 namespace Project_Manager
 {
     public class Program
-    {string project = "try" ;
-
+    {
         static void Main(string[] args)
         {   
             string statement = "1";
@@ -55,7 +54,7 @@ namespace Project_Manager
                     
                 }
             }
-            
+           
         }
 
     }
@@ -162,8 +161,8 @@ namespace Project_Manager
             task.Status = status;
         }
 
-        public void GenerateReport( )
-        {
+        public void GenerateReport()
+        { 
             Console.WriteLine("Project Name: {0}", this.Name);
             Console.WriteLine("Project Description: {0}", this.Description);
             Console.WriteLine("Project Start Date: {0}", this.StartDate);
@@ -191,6 +190,7 @@ namespace Project_Manager
                 }
 
             }
+            
         }
 
     }
