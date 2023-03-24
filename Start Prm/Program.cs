@@ -156,36 +156,37 @@ namespace Project_Manager
             task.Status = status;
         }
 
-        public void GenerateReport()
+        public void GenerateReport(string[] elem)
         {
             Console.WriteLine("Project Name: {0}", this.Name);
-                Console.WriteLine("Project Description: {0}", this.Description);
-                Console.WriteLine("Project Start Date: {0}", this.StartDate);
-                Console.WriteLine("Project End Date: {0}", this.EndDate);
-                Console.WriteLine("Project Budget: {0}", this.Budget);
-                Console.WriteLine("Tasks:");
+            Console.WriteLine("Project Description: {0}", this.Description);
+            Console.WriteLine("Project Start Date: {0}", this.StartDate);
+            Console.WriteLine("Project End Date: {0}", this.EndDate);
+            Console.WriteLine("Project Budget: {0}", this.Budget);
+            Console.WriteLine("Tasks:");
 
-                foreach (Task task in this.Tasks)
+            foreach (Task task in this.Tasks)
+            {
+                Console.WriteLine("Name: {0}", task.Name);
+                Console.WriteLine("Description: {0}", task.Description);
+                Console.WriteLine("Start Date: {0}", task.StartDate);
+                Console.WriteLine("End Date: {0}", task.EndDate);
+                Console.WriteLine("Budget: {0}", task.Budget);
+                Console.WriteLine("Status: {0}", task.Status);
+                Console.WriteLine("Team Members:");
+
+                foreach (TeamMember teamMember in task.TeamMembers)
                 {
-                    Console.WriteLine("Name: {0}", task.Name);
-                    Console.WriteLine("Description: {0}", task.Description);
-                    Console.WriteLine("Start Date: {0}", task.StartDate);
-                    Console.WriteLine("End Date: {0}", task.EndDate);
-                    Console.WriteLine("Budget: {0}", task.Budget);
-                    Console.WriteLine("Status: {0}", task.Status);
-                    Console.WriteLine("Team Members:");
+                    Console.WriteLine("Name: {0}", teamMember.Name);
+                    Console.WriteLine("Email: {0}", teamMember.Email);
+                    Console.WriteLine("Status: {0}", teamMember.Status);
 
-                    foreach (TeamMember teamMember in task.TeamMembers)
-                    {
-                        Console.WriteLine("Name: {0}", teamMember.Name);
-                        Console.WriteLine("Email: {0}", teamMember.Email);
-                        Console.WriteLine("Status: {0}", teamMember.Status);
-                        
-                        
-                    }
-                    
+
+                }
+
+            }
         }
-        
+
     }
     
     public class Task
@@ -259,6 +260,3 @@ namespace Project_Manager
     }
     
 }
-
-
-
