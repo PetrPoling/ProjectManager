@@ -36,7 +36,7 @@ namespace Project_Manager
                     string teamMemberName = Console.ReadLine();
                     Console.WriteLine("Please enter team member email");
                     string teamMemberEmail = Console.ReadLine();
-                    Console.WriteLine("Task_Satus:");
+                    Console.WriteLine("Task_Satus:NotStarted, InProgress, Completed");
                     string Task_Status = Console.ReadLine();
 
                     Project project = new Project();
