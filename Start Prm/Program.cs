@@ -53,6 +53,12 @@ namespace Project_Manager
                     Console.WriteLine("If you want to exit pres 0 if not press 1");
                     statement = Console.ReadLine();
                     project.GenerateReport();
+                    while (statement == "edit")
+                    {
+                        Console.WriteLine("You have some options:" +
+                                          "AddProject, EditProject, RemoveProject");
+                        
+                    }
                     
                 }
             }
