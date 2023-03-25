@@ -5,7 +5,7 @@ using TaskStatus = System.Threading.Tasks.TaskStatus;
 namespace Project_Manager
 {
     public class Program
-    {
+    {   
         static void Main(string[] args)
         {   
             string statement = "1";
@@ -58,75 +58,4 @@ namespace Project_Manager
         }
 
     }
-    
-    public class Task
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public double Budget { get; set; }
-        public TaskStatus Status { get; set; }
-        public List<TeamMember> TeamMembers { get; set; }
-        public Task()
-            { 
-                TeamMembers = new List<TeamMember>();
-            }
-        public void CreateTask(string name, string description, DateTime startDate, DateTime endDate, double budget)
-        {
-            Name = name;
-            Description = description;
-            StartDate = startDate;
-            EndDate = endDate;
-            Budget = budget;
-        }
-
-        public void AddTeamMember(TeamMember teamMember)
-        {
-            TeamMembers.Add(teamMember);
-        }
-
-        public void RemoveTeamMember(TeamMember teamMember)
-        {
-            TeamMembers.Remove(teamMember);
-        }
-
-        public void ChangeTaskStatus(TaskStatus status)
-        {
-            Status = status;
-        }
-
-    }
-    
-    public class TeamMember
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public TaskStatus Status { get; set; }
-
-        public void CreateTeamMember(string name, string email)
-        {
-            Name = name;
-            Email = email;
-        }
-
-        public void ChangeStatus(TaskStatus status)
-        {
-            Status = status;
-        }
-    }
-
-
-    public class TaskStatus
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-
-        public static TaskStatus NotStarted = new TaskStatus { Id = 1, Name = "Не начато" };
-        public static TaskStatus InProgress = new TaskStatus { Id = 2, Name = "В процессе" };
-        public static TaskStatus Completed = new TaskStatus { Id = 3, Name = "Завершено" };
-    }
-    
 }
