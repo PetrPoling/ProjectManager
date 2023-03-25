@@ -100,7 +100,7 @@ public class Project
 
         public void ChangeTaskStatus(Task task, TaskStatus status)
         {
-            task.Status = status;
+            TaskStatus.Status = status;
         }
 
         public void GenerateReport()
@@ -119,10 +119,10 @@ public class Project
                 Console.WriteLine("Start Date: {0}", task.StartDate);
                 Console.WriteLine("End Date: {0}", task.EndDate);
                 Console.WriteLine("Budget: {0}", task.Budget);
-                Console.WriteLine("Status: {0}", task.Status);
+                Console.WriteLine("Status: {0}", TaskStatus.Status);
                 Console.WriteLine("Team Members:");
 
-                foreach (TeamMember teamMember in task.TeamMembers)
+                foreach (TeamMember teamMember in TeamMember.TeamMembers)
                 {
                     Console.WriteLine("Name: {0}", teamMember.Name);
                     Console.WriteLine("Email: {0}", teamMember.Email);

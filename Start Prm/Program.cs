@@ -36,6 +36,8 @@ namespace Project_Manager
                     string teamMemberName = Console.ReadLine();
                     Console.WriteLine("Please enter team member email");
                     string teamMemberEmail = Console.ReadLine();
+                    Console.WriteLine("Task_Satus:");
+                    string Task_Status = Console.ReadLine();
 
                     Project project = new Project();
                     project.CreateProject(projectName, projectDescription, projectStartDate, projectEndDate,
@@ -47,7 +49,7 @@ namespace Project_Manager
 
                     TeamMember teamMember1 = new TeamMember();
                     teamMember1.CreateTeamMember(teamMemberName, teamMemberEmail);
-                    task1.AddTeamMember(teamMember1);
+                    TeamMember.AddTeamMember(teamMember1);
                     Console.WriteLine("If you want to exit pres 0 if not press 1");
                     statement = Console.ReadLine();
                     project.GenerateReport();
